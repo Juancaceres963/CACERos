@@ -51,22 +51,64 @@ header {
 .contenedor {
   margin: 5% 15%;
 }
-.contenedor.home {
-  display: flex;
+@media only screen and (min-width: 768px) {
+    .contenedor.home {
+        display: flex;
+      }
 }
-.presentaciones img {
-  border: 3px solid rgb(212, 212, 212);
-  border-radius: 20px;
-  height: 100%;
+.carousel {
+  position: relative;
   width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border: 15px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(66, 66, 66, 0.651);
+}
+.carousel ul {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  background-color: #fff;
+}
+.carousel ul li {
+  float: left;
+  width: 33.333%;
+  height: 100%;
+}
+.carousel ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+  z-index: 2;
+}
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
 }
 .texto-presentacion {
+ margin: auto 0 auto 30px;
   max-width: 300px;
   padding: 25px 40px;
-  text-align: justify;
-  margin: auto 0;
+  text-align: end;
 }
 .texto-presentacion h1 {
-  font-size: 3rem;
+  margin-top: 0;
+  font-size: 4rem;
   font-family: "PT Sans", sans-serif;
 }
