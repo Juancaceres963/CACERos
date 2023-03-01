@@ -46,4 +46,23 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// Seccion de Productos 
+
+var frutilla = document.querySelector(".varios-productos a:first-child");
+var durazno = document.querySelector(".varios-productos a:nth-child(2)");
+var piña = document.querySelector(".varios-productos a:last-child");
+
+$(frutilla).show();
+$(frutilla).addClass("boton-act").css({"border-radius": "15px 0 0 0"});
+$(piña).css({"border-radius": "0 15px 0 0"});
+
+$(".varios-productos a").on("click", function () {
+  var enlace = $(this).attr("href");
+  $(".productos .info-producto").hide();
+  $(".varios-productos a").removeClass("boton-act");
+  $(this).addClass("boton-act");
+  $(enlace).fadeIn(1000);
+
+  return false;
+});
 });

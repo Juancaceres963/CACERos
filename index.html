@@ -9,18 +9,29 @@
     <link rel="stylesheet" href="/css/normalice.css" />
   </head>
   <body>
-    <header>
+    <header id="home">
       <div class="home">
-        <nav class="navbar">
-          <img src="/img/LogoCACERos.jpg" alt="" />
+        <div class="nav-reduciodo">
+          <div class="menu-hamburguesa">
+            <span>__</span>
+          </div>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
+        </div>
+        <nav class="navbar">
+          <img src="/img/LogoCACERos.jpg" alt="" />
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
         </nav>
-        <div class="contenedor home">
+        <div class="contenedor contenedor-home">
           <div class="carousel" id="carousel">
             <ul>
               <li><img src="/img/carousel1.jpg" /></li>
@@ -31,7 +42,8 @@
             <a class="carousel-next" href="#">&#9654;</a>
           </div>
           <div class="texto">
-            <h1 id="texto">CACER'os</h1>
+            <div id="texto"></div>
+            <h1>CACER'os</h1>
             <h2>De nuestra casa para sus hogares...</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
@@ -43,15 +55,56 @@
         </div>
       </div>
     </header>
-    <section id="inicio">
-      <div class="segmento">
-        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          aliquam dolores culpa provident ex illo blanditiis corrupti facere
-          natus, et sed error architecto minima, laboriosam iusto unde saepe
-          distinctio enim!
-        </p>
+    <section id="productos">
+      <div class="segmento container cards">
+        <div class="productos" >
+          <h2 class="subtitulo">Productos:</h2>
+          <nav class="varios-productos">
+            <a href="#yg-frut">Frutilla</a>
+            <a href="#yg-duraz">Durazno</a>
+            <a href="#yg-piña">Piña</a>
+          </nav>
+          <div id="yg-frut" class="info-producto">
+            <div class="detalle-producto">
+              <img src="/img/yg-frutilla.jpg" alt="Yougurt sabor frutilla">
+              <h3>Yogurt sabor Frutilla</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consequuntur, veniam, dolorum architecto quia odit rerum culpa
+                ducimus voluptas eaque.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolores, illo eum nobis inventore dolore vero recusandae tempore
+                exercitationem corrupti ipsum officia officiis aliquam odit
+                reprehenderit necessitatibus distinctio eos eius similique!
+              </p>
+            </div>
+            <a href="#" class="button float-right">Ver todos</a>
+          </div>
+          <div id="yg-duraz" class="info-producto ocultar">
+            <div class="detalle-producto">
+              <img src="/img/yg-durazno.jpg" alt="Yougurt sabor frutilla">
+              <h3>Yogurt sabor Durazno</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consequuntur, veniam, dolorum architecto quia odit rerum culpa
+                ducimus voluptas eaque.
+              </p>
+            </div>
+            <a href="#" class="button float-right">Ver todos</a>
+          </div>
+          <div id="yg-piña" class="info-producto ocultar">
+            <div class="detalle-producto">
+              <img src="/img/yg-piña.jpg" alt="Yougurt sabor frutilla">
+              <h3>Yogurt sabor Piña</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consequuntur, veniam, dolorum architecto quia odit rerum culpa
+                ducimus voluptas eaque.
+              </p>
+            </div>
+            <a href="#" class="button float-right">Ver todos</a>
+          </div>
+        </div>
       </div>
     </section>
     <script src="/js/jquey.js"></script>

@@ -28,7 +28,7 @@ nav.active {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   transition: all .1s ease;
-  padding: 5px;
+  padding: 5px 0;
 }
 nav.active ul li a {
   color: black;
@@ -38,22 +38,48 @@ nav.active ul li a:hover {
   background-color: transparent;
   border-bottom: 2px solid rgb(230, 0, 107);
 }
-
+.container {
+  margin: 30px 10rem;
+}
+.subtitulo {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  font-family: 'PT Sans', sans-serif;
+}
+.ocultar {
+  display: none;
+}
+.boton-act{
+  background-color: rgb(230, 0, 107);
+}
 /* Principal Home */
 .home {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background-image: url(../img/fondo-largo.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.nav-reduciodo {
+  display: none;
+}
+.menu-hamburguesa{
+  display: flex;
+  flex-direction: column;
+}
+.nav-reduciodo ul{
+  display: block;
+  width: 100%;
+  height: 25px;
+  text-align: center;  
+}
 .navbar {
   position: fixed;
   margin-top: 20px;
   width: 100%;
   height: 50px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   z-index: 3;
   transition: all .2s ease;
@@ -85,9 +111,10 @@ nav.active ul li a:hover {
   width: 100%;
   height: 100%;
 }
-/* .texto img {
-  margin-bottom: 50px;
-} */
+#texto {
+  width: 100%;
+  height: 20px;
+}
 .texto {
   color: #fff;
   font-weight: bold;
@@ -109,7 +136,15 @@ nav.active ul li a:hover {
   /* border: 2px solid black; */
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 1160px) {
+  .home {
+    min-height: 900px;
+  }
+}
 @media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+  }
   .contenedor {
     display: flex;
     flex-direction: row-reverse;
@@ -125,6 +160,7 @@ nav.active ul li a:hover {
     justify-content: center;
   }
 }
+
 /* Carrousel */
 .carousel {
   display: flex;
@@ -174,7 +210,7 @@ nav.active ul li a:hover {
   right: 10px;
 }
 @media only screen and (max-width: 1160px) {
-  .contenedor.home {
+  .contenedor.contenedor-home {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -211,11 +247,80 @@ nav.active ul li a:hover {
     width: 700px;
     height: 550px;
   }
+  .texto h1 {
+    font-size: 7rem;
+  }
+  .texto h2 {
+    font-size: 2.8rem;
+  }
+  .texto p {
+    font-size: 1.8rem;
+  }
 }
 
 /* Segmento */
 
 .segmento {
-  height: 100vh;
+  height: 400px;
+  width: auto;
+}
+.segmento h2, .segmento p{
+  color: rgb(0, 0, 0);
+}
+.varios-productos {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(156, 255, 75);
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  border: 2px solid silver;
   width: 100%;
+}
+.varios-productos a{
+  color: #fff;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+.varios-productos a:hover{
+  background-color: rgb(230, 0, 107);
+}
+.varios-productos a:first-child:hover{
+  border-radius: 15px 0 0 0;
+}
+.varios-productos a:last-child:hover{
+  border-radius: 0 15px 0 0;
+}
+.detalle-producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  grid-template-areas: 
+  "img text1 text1"
+  "img info-producto infoproducto"
+  "img text text";
+  border: 2px solid silver;
+  border-radius: 0 0 15px 15px;
+}
+.detalle-producto h3 {
+  grid-column-start: text1;
+  grid-column-end: text1;
+  text-align: center;
+  margin: auto;
+}
+.detalle-producto img {
+  grid-row-start: img;
+  grid-row-end: img;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 0 0 0 15px;
+  border-right: 2px solid silver;
+}
+.detalle-producto p {
+  padding: 20px;
+  grid-column-start: text;
+  grid-column-end: text;
+  grid-row-start: text;
+  grid-row-end: text;
 }
