@@ -12,7 +12,7 @@ setInterval(function() {
     imageIndex = 0;
   }
   carousel.querySelector('ul').style.transform = 'translateX(-' + (imageIndex * 33.333) + '%)';
-}, 30000);
+}, 5000);
 
 prevButton.addEventListener('click', function(e) {
   e.preventDefault();
