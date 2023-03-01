@@ -8,6 +8,36 @@ a {
 ul {
   list-style: none;
 }
+h1 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Utilidades */
+
+nav.active {
+  margin-top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transition: all .1s ease;
+  padding: 5px;
+}
+nav.active ul li a {
+  color: black;
+}
+nav.active ul li a:hover {
+  color: rgb(230, 0, 107);
+  background-color: transparent;
+  border-bottom: 2px solid rgb(230, 0, 107);
+}
 
 /* Principal Home */
 .home {
@@ -26,6 +56,7 @@ ul {
   display: flex;
   justify-content: space-between;
   z-index: 3;
+  transition: all .2s ease;
 }
 .navbar img {
   margin: 0 20px;
@@ -93,13 +124,8 @@ ul {
     flex-direction: column;
     justify-content: center;
   }
-  .carousel {
-    margin-left: 50px;
-  }
 }
-
 /* Carrousel */
-
 .carousel {
   display: flex;
   position: relative;
@@ -109,6 +135,7 @@ ul {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 10px 5px 30px;
+  padding-bottom: 30px;
 }
 .carousel ul {
   position: absolute;
@@ -146,35 +173,49 @@ ul {
 .carousel-next {
   right: 10px;
 }
-@media only screen and (min-width: 1500px) {
-  .carousel {
-    width: 800px;
-    height: 600px;
-  }
-}
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1160px) {
   .contenedor.home {
     display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    min-height: 800px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 900px;
+    position: absolute;
+    top: -40px;
+  }
+  .carousel {
+    position: relative;
+    top: -60px;
   }
   .texto h1 {
     margin-top: 30px;
     margin-bottom: 0;
+
   }
 }
 @media only screen and (min-width: 768px){
   .carousel {
+    width: 580px;
+    height: 400px;
+    margin-right: 20px;
+  }
+  .texto {
     width: 600px;
-    height: 450px;
   }
   .texto h1 {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1560px) {
   .carousel {
-    margin: 0 auto;
+    width: 700px;
+    height: 550px;
   }
+}
+
+/* Segmento */
+
+.segmento {
+  height: 100vh;
+  width: 100%;
 }

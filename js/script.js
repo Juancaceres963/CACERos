@@ -32,5 +32,18 @@ nextButton.addEventListener('click', function(e) {
   carousel.querySelector('ul').style.transform = 'translateX(-' + (imageIndex * 33.333) + '%)';
 });
 ``
+//  Mostrar y ocultar el back del navbar 
+
+var nav = document.querySelector('nav');
+var section = document.querySelector('#carousel'); // la sección que deseas ocultar
+var seccion2 = document.querySelector("#texto");
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset >= section.offsetTop || window.pageYOffset >= texto.offsetTop) {
+    nav.classList.add('active');
+  } else {
+    nav.classList.remove('active');
+  }
+});
 
 });
