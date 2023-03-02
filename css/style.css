@@ -274,7 +274,6 @@ nav.active ul li a:hover {
   align-items: center;
   border-radius: 15px 15px 0 0;
   border: 2px solid silver;
-  width: 100%;
 }
 .varios-productos a{
   color: #fff;
@@ -284,7 +283,7 @@ nav.active ul li a:hover {
   padding: 5px 0;
 }
 .varios-productos a:hover{
-  background-color: rgb(230, 0, 107);
+  background-color: rgba(228, 48, 132, 0.87);
 }
 .varios-productos a:first-child:hover{
   border-radius: 15px 0 0 0;
@@ -298,16 +297,11 @@ nav.active ul li a:hover {
   grid-template-rows: 1fr 1fr 6fr;
   grid-template-areas: 
   "img text1 text1"
-  "img info-producto infoproducto"
+  "img info-producto info-producto"
   "img text text";
   border: 2px solid silver;
   border-radius: 0 0 15px 15px;
-}
-.detalle-producto h3 {
-  grid-column-start: text1;
-  grid-column-end: text1;
-  text-align: center;
-  margin: auto;
+  justify-content: center;
 }
 .detalle-producto img {
   grid-row-start: img;
@@ -317,7 +311,27 @@ nav.active ul li a:hover {
   border-radius: 0 0 0 15px;
   border-right: 2px solid silver;
 }
-.detalle-producto p {
+.detalle-producto h3 {
+  grid-column-start: text1;
+  grid-column-end: text1;
+  margin: auto;
+  text-align: center;
+}
+.detalle-producto nav {
+  display: flex;
+  justify-content: space-aroundgit status;
+  align-items: center;
+  grid-row-start: info-producto;
+  grid-row-end: info-producto;
+  grid-column-start: info-producto;
+  grid-column-end: info-producto;
+}
+.detalle-producto nav a{
+  
+  color: black;
+}
+.detalle-producto div p {
+  display: none;
   padding: 20px;
   grid-column-start: text;
   grid-column-end: text;
