@@ -57,6 +57,7 @@ $(frutilla).addClass("boton-act").css({"border-radius": "15px 0 0 0"});
 $(piña).css({"border-radius": "0 15px 0 0"});
 
 $(".varios-productos a").on("click", function () {
+
   var enlace = $(this).attr("href");
   $(".productos .info-producto").hide();
   $(".varios-productos a").removeClass("boton-act");
@@ -65,4 +66,49 @@ $(".varios-productos a").on("click", function () {
 
   return false;
 });
+
+const generalFrut = document.getElementById("frut-general");
+const navGeneralFrut = document.querySelector(".nav-info-especifica a:first-child");
+
+const generalDuraz = document.getElementById("duraz-general");
+const navGeneralDuraz = document.querySelector(".nav-info-especifica.duraz a:first-child");
+
+const generalPiña = document.getElementById("piña-general");
+const navGeneralPiña = document.querySelector(".nav-info-especifica.piña a:first-child");
+
+$(".info-especifica").hide();
+
+$(navGeneralFrut).addClass("letra-verde");
+$(navGeneralDuraz).addClass("letra-verde");
+$(navGeneralPiña).addClass("letra-verde");
+
+$(generalFrut).show();
+$(generalDuraz).show();
+$(generalPiña).show();
+
+$(".nav-info-especifica a").on("click", function(){
+  var enlace = $(this).attr("href");
+  $(".info-especifica").hide();
+  $(".nav-info-especifica a").removeClass("letra-verde");
+  $(this).addClass("letra-verde");
+  $(enlace).fadeIn(1000);
+})
+
+// Controlando estilos del nav de productos cuando es mas pequeña la pantalla
+
+$(document).ready(function() {
+  $(window).resize(function() {
+    if ($(window).width() < 768) {
+      $(".varios-productos a:first-child").css({"border-radius": "15px 15px 0 0"});
+    } else {
+      $(".varios-productos a:first-child").css({"border-radius": "15px 0 0 0"});
+    }
+    if ($(window).width() < 768) {
+      $(".varios-productos a:last-child").css({"border-radius": "0 0 0 0"});
+    } else {
+      $(".varios-productos a:last-child").css({"border-radius": " 0 15px 0 0"});
+    }
+  });
+});
+
 });
