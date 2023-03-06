@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mada:wght@300;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  --verde: #42ab49;
+  --amarillo: #fdfd96;
+  --naranja: #ffa333;
+  --rojo: #f01e2c;
 }
 a {
   text-decoration: none;
   color:rgb(0, 0, 0);
+  font-family: 'Mada', sans-serif;
 }
 ul {
   list-style: none;
@@ -14,12 +21,19 @@ h1 {
   padding: 0;
 }
 h2 {
+  font-family: 'Lobster', cursive;
   margin: 0;
   padding: 0;
 }
 h3 {
+  font-family: 'Mada', sans-serif;
+  font-weight: 600;
   margin: 0;
   padding: 0;
+}
+p{
+  font-family: 'Mada', sans-serif;
+  font-weight: 300;
 }
 
 /* Utilidades */
@@ -46,7 +60,7 @@ nav.active ul li a:hover {
 .subtitulo {
   font-size: 2.5rem;
   margin: 20px 0;
-  font-family: 'PT Sans', sans-serif;
+  text-align: center;
 }
 .ocultar {
   display: none;
@@ -68,7 +82,7 @@ nav.active ul li a:hover {
 .home {
   width: auto;
   height: 100vh;
-  background-image: url(../img/fondo-largo.jpg);
+  background-image: url(../img/fondo-largo-verde-grama.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,7 +128,7 @@ nav.active ul li a:hover {
   transition: all 0.3s ease;
 }
 .navbar ul li a:hover {
-  background-color: rgb(230, 0, 107);
+  background-color: #EFCFE3;
   color: #fff;
   transition: all 0.3s ease;
   border-radius: 15px;
@@ -278,7 +292,7 @@ nav.active ul li a:hover {
 .varios-productos {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(156, 255, 75);
+  background-color: #EFCFE3;
   align-items: center;
   border-radius: 15px 15px 0 0;
   border: 2px solid silver;

@@ -92,6 +92,8 @@ $(".nav-info-especifica a").on("click", function(){
   $(".nav-info-especifica a").removeClass("letra-verde");
   $(this).addClass("letra-verde");
   $(enlace).fadeIn(1000);
+
+  return false;
 })
 
 // Controlando estilos del nav de productos cuando es mas pequeña la pantalla
